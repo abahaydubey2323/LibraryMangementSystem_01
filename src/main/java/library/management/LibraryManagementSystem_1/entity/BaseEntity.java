@@ -1,4 +1,4 @@
-package com.library.entity;
+package library.management.LibraryManagementSystem_1.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

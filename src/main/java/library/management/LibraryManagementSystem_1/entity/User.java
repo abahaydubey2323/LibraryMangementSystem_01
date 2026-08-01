@@ -2,21 +2,23 @@ package library.management.LibraryManagementSystem_1.entity;
 
 
 import jakarta.persistence.*;
+import library.management.LibraryManagementSystem_1.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
- import com.library.entity.BaseEntity;
+// import com.library.entity.BaseEntity;
 
-import javax.management.relation.Role;
+//import javax.management.relation.Role;
 import java.time.LocalDateTime;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Builder
 @Table(name = "users")
+@Data
 public class User extends BaseEntity{
 
 
@@ -33,8 +35,13 @@ public class User extends BaseEntity{
     private String password;
 
     @Enumerated(EnumType.STRING)
-    private com.library.enums.Role role;
+    private Role role;
 
+
+
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean enabled = true;
 
 
 }

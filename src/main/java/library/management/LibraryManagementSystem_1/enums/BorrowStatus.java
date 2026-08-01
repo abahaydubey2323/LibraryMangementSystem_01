@@ -1,8 +1,10 @@
 package library.management.LibraryManagementSystem_1.enums;
 
 
-public enum Role {
-    ADMIN,
-    LIBRARIAN,
-    USER
+public enum BorrowStatus {
+
+    BORROWED,
+
+    RETURNED
+
 }
